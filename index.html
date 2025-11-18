@@ -1,293 +1,800 @@
 <!doctype html>
 <html lang="pt-BR">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página Pessoal</title>
-  <script src="/_sdk/element_sdk.js"></script>
-  
-    <link rel="stylesheet" href="style.css">
-  
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
-  <button class="menu-toggle" id="menu-toggle"> 
-    <span class="menu-line"></span> 
-    <span class="menu-line"></span> 
-    <span class="menu-line"></span> 
-  </button>
-  <div class="container">
-        <div class="sidebar" id="sidebar">
-     <h1 id="page-title">Thayna</h1>      <div class="menu-item active" data-page="inicio">
-      Início
-     </div>
-     <div class="menu-item" data-page="thay">
-      Thay
-     </div>
-     <div class="menu-item" data-page="jesus">
-      Jesus
-     </div>
-     <div class="menu-item" data-page="estudos">
-      Estudos
-     </div>
-     <div class="menu-item" data-page="familia">
-      Família
-     </div>
-     <div class="menu-item" data-page="amigos">
-      Amigos
-     </div>
-    </div>
-        <div class="content">
-           <div class="stars" id="stars"></div>
-           <div class="page active" id="inicio">
-      <div class="carousel-container">
-       <h2 class="carousel-title" id="carousel-title">Thayna</h2>
-               <div class="social-icons">
-        <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#6A2FC7" stroke-width="2" /> <circle cx="12" cy="12" r="4" stroke="#6A2FC7" stroke-width="2" /> <circle cx="18" cy="6" r="1.5" fill="#6A2FC7" />
-        </svg>
-        <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#6A2FC7" stroke-width="2" /> <path d="M8 10.5C8 10.5 10 9 12 9C14 9 16 10.5 16 10.5M8 13C8 13 10 11.5 12 11.5C14 11.5 16 13 16 13M8 15.5C8 15.5 10 14 12 14C14 14 16 15.5 16 15.5" stroke="#6A2FC7" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-        <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#6A2FC7" />
-        </svg>
-       </div>
-       <div class="carousel">
-        <div class="carousel-slide active">
-         Foto 1
-        </div>
-        <div class="carousel-slide">
-         Foto 2
-        </div>
-        <div class="carousel-slide">
-         Foto 3
-        </div>
-        <div class="carousel-slide">
-         Foto 4
-        </div>
-        <div class="carousel-slide">
-         Foto 5
-        </div>
-        <div class="carousel-slide">
-         Foto 6
-        </div>
-        <div class="carousel-indicator">
-         <span id="current-slide">1</span> / 6
-        </div>
-        <div class="carousel-controls"><button class="carousel-btn" id="prev-btn">◀</button> <button class="carousel-btn" id="next-btn">▶</button>
-        </div>
-       </div>
-      </div>
-     </div>
-           <div class="page" id="thay">
-      <p class="page-description">Oi! Eu sou a Thayna :)</p>
-      <div class="gallery">
-       <div class="gallery-item">
-        Foto 1
-       </div>
-       <div class="gallery-item">
-        Foto 2
-       </div>
-       <div class="gallery-item">
-        Foto 3
-       </div>
-       <div class="gallery-item">
-        Foto 4
-       </div>
-       <div class="gallery-item">
-        Foto 5
-       </div>
-       <div class="gallery-item">
-        Foto 6
-       </div>
-       <div class="gallery-item">
-        Foto 7
-       </div>
-       <div class="gallery-item">
-        Foto 8
-       </div>
-       <div class="gallery-item">
-        Foto 9
-       </div>
-       <div class="gallery-item">
-        Foto 10
-       </div>
-       <div class="gallery-item">
-        Foto 11
-       </div>
-       <div class="gallery-item">
-        Foto 12
-       </div>
-      </div>
-     </div>
-           <div class="page" id="jesus">
-      <p class="page-description">"Pois eu conheço os planos que tenho para vocês, diz o Senhor; planos de paz e não de mal, para dar a vocês um futuro e uma esperança" Jeremias 29, 11</p>
-      <div class="gallery">
-       <div class="gallery-item">
-        Foto 1
-       </div>
-       <div class="gallery-item">
-        Foto 2
-       </div>
-       <div class="gallery-item">
-        Foto 3
-       </div>
-       <div class="gallery-item">
-        Foto 4
-       </div>
-       <div class="gallery-item">
-        Foto 5
-       </div>
-       <div class="gallery-item">
-        Foto 6
-       </div>
-       <div class="gallery-item">
-        Foto 7
-       </div>
-       <div class="gallery-item">
-        Foto 8
-       </div>
-       <div class="gallery-item">
-        Foto 9
-       </div>
-       <div class="gallery-item">
-        Foto 10
-       </div>
-       <div class="gallery-item">
-        Foto 11
-       </div>
-       <div class="gallery-item">
-        Foto 12
-       </div>
-      </div>
-     </div>
-           <div class="page" id="estudos">
-      <p class="page-description">"O mistério da existência humana não reside apenas em se manter vivo, mas em encontrar um propósito ou algo pelo qual viver" Dostoiévski</p>
-      <div class="gallery">
-       <div class="gallery-item">
-        Foto 1
-       </div>
-       <div class="gallery-item">
-        Foto 2
-       </div>
-       <div class="gallery-item">
-        Foto 3
-       </div>
-       <div class="gallery-item">
-        Foto 4
-       </div>
-       <div class="gallery-item">
-        Foto 5
-       </div>
-       <div class="gallery-item">
-        Foto 6
-       </div>
-       <div class="gallery-item">
-        Foto 7
-       </div>
-       <div class="gallery-item">
-        Foto 8
-       </div>
-       <div class="gallery-item">
-        Foto 9
-       </div>
-       <div class="gallery-item">
-        Foto 10
-       </div>
-       <div class="gallery-item">
-        Foto 11
-       </div>
-       <div class="gallery-item">
-        Foto 12
-       </div>
-      </div>
-     </div>
-           <div class="page" id="familia">
-      <p class="page-description">"Se tens por que viver, não importa os reveses" Nietzsche</p>
-      <div class="gallery">
-       <div class="gallery-item">
-        Foto 1
-       </div>
-       <div class="gallery-item">
-        Foto 2
-       </div>
-       <div class="gallery-item">
-        Foto 3
-       </div>
-       <div class="gallery-item">
-        Foto 4
-       </div>
-       <div class="gallery-item">
-        Foto 5
-       </div>
-       <div class="gallery-item">
-        Foto 6
-       </div>
-       <div class="gallery-item">
-        Foto 7
-       </div>
-       <div class="gallery-item">
-        Foto 8
-       </div>
-       <div class="gallery-item">
-        Foto 9
-       </div>
-       <div class="gallery-item">
-        Foto 10
-       </div>
-       <div class="gallery-item">
-        Foto 11
-       </div>
-       <div class="gallery-item">
-        Foto 12
-       </div>
-      </div>
-     </div>
-           <div class="page" id="amigos">
-      <p class="page-description">"O segredo, querida Alice, é rodear-se de pessoas que façam sorrir o coração. É então, só então que estarás no país das maravilhas"</p>
-      <div class="gallery">
-       <div class="gallery-item">
-        Foto 1
-       </div>
-       <div class="gallery-item">
-        Foto 2
-       </div>
-       <div class="gallery-item">
-        Foto 3
-       </div>
-       <div class="gallery-item">
-        Foto 4
-       </div>
-       <div class="gallery-item">
-        Foto 5
-       </div>
-       <div class="gallery-item">
-        Foto 6
-       </div>
-       <div class="gallery-item">
-        Foto 7
-       </div>
-       <div class="gallery-item">
-        Foto 8
-       </div>
-       <div class="gallery-item">
-        Foto 9
-       </div>
-       <div class="gallery-item">
-        Foto 10
-       </div>
-       <div class="gallery-item">
-        Foto 11
-       </div>
-       <div class="gallery-item">
-        Foto 12
-       </div>
-      </div>
-     </div>
-    </div>
-  </div>
-  
-    <script src="script.js"></script>
-  
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0afc89022b1b1b',t:'MTc2MzUwNTgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
- </body>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página Pessoal</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #ffffff;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    /* Menu Hambúrguer */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: #6A2FC7;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 12px;
+      box-shadow: 0 2px 10px rgba(106, 47, 199, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+      background: #5A20B0;
+      transform: scale(1.05);
+    }
+
+    .menu-line {
+      width: 26px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Menu Vertical */
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: #6A2FC7;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar h1 {
+      color: #ffffff;
+      font-size: 28px;
+      margin: 0 30px 40px;
+      text-align: center;
+    }
+
+    .menu-item {
+      color: #ffffff;
+      padding: 15px 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      font-size: 18px;
+    }
+
+    .menu-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-left-color: #ffffff;
+    }
+
+    .menu-item.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-left-color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* Conteúdo Principal */
+    .content {
+      flex: 1;
+      padding: 40px;
+      padding-top: 90px;
+      overflow-y: auto;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* Estrelas */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      fill: #6A2FC7;
+      opacity: 0.15;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.3; }
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* Página Inicial */
+    .carousel-container {
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .carousel-title {
+      color: #6A2FC7;
+      font-size: 56px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(106, 47, 199, 0.2);
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #6A2FC7 0%, #9370DB 100%);
+      color: #ffffff;
+      font-size: 24px;
+    }
+
+    .carousel-slide.active {
+      display: flex;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+
+    .carousel-btn {
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      color: #6A2FC7;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-btn:hover {
+      background: #6A2FC7;
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
+    .carousel-indicator {
+      color: #ffffff;
+      font-size: 18px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    /* Ícones Sociais */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* Galeria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #6A2FC7 0%, #9370DB 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 20px;
+      box-shadow: 0 4px 15px rgba(106, 47, 199, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .page-description {
+      text-align: center;
+      color: #6A2FC7;
+      font-size: 18px;
+      margin: 0 auto 30px;
+      max-width: 800px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+        padding-top: 80px;
+      }
+
+      .carousel {
+        height: 300px;
+      }
+
+      .carousel-title {
+        font-size: 28px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .social-icons {
+        gap: 25px;
+      }
+
+      .social-icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Botão Menu Hambúrguer --> <button class="menu-toggle" id="menu-toggle"> <span class="menu-line"></span> <span class="menu-line"></span> <span class="menu-line"></span> </button>
+  <div class="container"><!-- Menu Lateral -->
+   <div class="sidebar" id="sidebar">
+    <h1 id="page-title">Thayna</h1>
+    <div class="menu-item active" data-page="inicio">
+     Início
+    </div>
+    <div class="menu-item" data-page="thay">
+     Thay
+    </div>
+    <div class="menu-item" data-page="jesus">
+     Jesus
+    </div>
+    <div class="menu-item" data-page="estudos">
+     Estudos
+    </div>
+    <div class="menu-item" data-page="familia">
+     Família
+    </div>
+    <div class="menu-item" data-page="amigos">
+     Amigos
+    </div>
+   </div><!-- Conteúdo -->
+   <div class="content"><!-- Estrelas de fundo -->
+    <div class="stars" id="stars"></div><!-- Página Início -->
+    <div class="page active" id="inicio">
+     <div class="carousel-container">
+      <h2 class="carousel-title" id="carousel-title">Thayna</h2><!-- Ícones Sociais -->
+      <div class="social-icons">
+       <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#6A2FC7" stroke-width="2" /> <circle cx="12" cy="12" r="4" stroke="#6A2FC7" stroke-width="2" /> <circle cx="18" cy="6" r="1.5" fill="#6A2FC7" />
+       </svg>
+       <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#6A2FC7" stroke-width="2" /> <path d="M8 10.5C8 10.5 10 9 12 9C14 9 16 10.5 16 10.5M8 13C8 13 10 11.5 12 11.5C14 11.5 16 13 16 13M8 15.5C8 15.5 10 14 12 14C14 14 16 15.5 16 15.5" stroke="#6A2FC7" stroke-width="1.5" stroke-linecap="round" />
+       </svg>
+       <svg class="social-icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="#6A2FC7" />
+       </svg>
+      </div>
+      <div class="carousel">
+       <div class="carousel-slide active">
+        Foto 1
+       </div>
+       <div class="carousel-slide">
+        Foto 2
+       </div>
+       <div class="carousel-slide">
+        Foto 3
+       </div>
+       <div class="carousel-slide">
+        Foto 4
+       </div>
+       <div class="carousel-slide">
+        Foto 5
+       </div>
+       <div class="carousel-slide">
+        Foto 6
+       </div>
+       <div class="carousel-indicator">
+        <span id="current-slide">1</span> / 6
+       </div>
+       <div class="carousel-controls"><button class="carousel-btn" id="prev-btn">◀</button> <button class="carousel-btn" id="next-btn">▶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- Página Thay -->
+    <div class="page" id="thay">
+     <p class="page-description">Oi! Eu sou a Thayna :)</p>
+     <div class="gallery">
+      <div class="gallery-item">
+       Foto 1
+      </div>
+      <div class="gallery-item">
+       Foto 2
+      </div>
+      <div class="gallery-item">
+       Foto 3
+      </div>
+      <div class="gallery-item">
+       Foto 4
+      </div>
+      <div class="gallery-item">
+       Foto 5
+      </div>
+      <div class="gallery-item">
+       Foto 6
+      </div>
+      <div class="gallery-item">
+       Foto 7
+      </div>
+      <div class="gallery-item">
+       Foto 8
+      </div>
+      <div class="gallery-item">
+       Foto 9
+      </div>
+      <div class="gallery-item">
+       Foto 10
+      </div>
+      <div class="gallery-item">
+       Foto 11
+      </div>
+      <div class="gallery-item">
+       Foto 12
+      </div>
+     </div>
+    </div><!-- Página Jesus -->
+    <div class="page" id="jesus">
+     <p class="page-description">"Pois eu conheço os planos que tenho para vocês, diz o Senhor; planos de paz e não de mal, para dar a vocês um futuro e uma esperança" Jeremias 29, 11</p>
+     <div class="gallery">
+      <div class="gallery-item">
+       Foto 1
+      </div>
+      <div class="gallery-item">
+       Foto 2
+      </div>
+      <div class="gallery-item">
+       Foto 3
+      </div>
+      <div class="gallery-item">
+       Foto 4
+      </div>
+      <div class="gallery-item">
+       Foto 5
+      </div>
+      <div class="gallery-item">
+       Foto 6
+      </div>
+      <div class="gallery-item">
+       Foto 7
+      </div>
+      <div class="gallery-item">
+       Foto 8
+      </div>
+      <div class="gallery-item">
+       Foto 9
+      </div>
+      <div class="gallery-item">
+       Foto 10
+      </div>
+      <div class="gallery-item">
+       Foto 11
+      </div>
+      <div class="gallery-item">
+       Foto 12
+      </div>
+     </div>
+    </div><!-- Página Estudos -->
+    <div class="page" id="estudos">
+     <p class="page-description">"O mistério da existência humana não reside apenas em se manter vivo, mas em encontrar um propósito ou algo pelo qual viver" Dostoiévski</p>
+     <div class="gallery">
+      <div class="gallery-item">
+       Foto 1
+      </div>
+      <div class="gallery-item">
+       Foto 2
+      </div>
+      <div class="gallery-item">
+       Foto 3
+      </div>
+      <div class="gallery-item">
+       Foto 4
+      </div>
+      <div class="gallery-item">
+       Foto 5
+      </div>
+      <div class="gallery-item">
+       Foto 6
+      </div>
+      <div class="gallery-item">
+       Foto 7
+      </div>
+      <div class="gallery-item">
+       Foto 8
+      </div>
+      <div class="gallery-item">
+       Foto 9
+      </div>
+      <div class="gallery-item">
+       Foto 10
+      </div>
+      <div class="gallery-item">
+       Foto 11
+      </div>
+      <div class="gallery-item">
+       Foto 12
+      </div>
+     </div>
+    </div><!-- Página Família -->
+    <div class="page" id="familia">
+     <p class="page-description">"Se tens por que viver, não importa os reveses" Nietzsche</p>
+     <div class="gallery">
+      <div class="gallery-item">
+       Foto 1
+      </div>
+      <div class="gallery-item">
+       Foto 2
+      </div>
+      <div class="gallery-item">
+       Foto 3
+      </div>
+      <div class="gallery-item">
+       Foto 4
+      </div>
+      <div class="gallery-item">
+       Foto 5
+      </div>
+      <div class="gallery-item">
+       Foto 6
+      </div>
+      <div class="gallery-item">
+       Foto 7
+      </div>
+      <div class="gallery-item">
+       Foto 8
+      </div>
+      <div class="gallery-item">
+       Foto 9
+      </div>
+      <div class="gallery-item">
+       Foto 10
+      </div>
+      <div class="gallery-item">
+       Foto 11
+      </div>
+      <div class="gallery-item">
+       Foto 12
+      </div>
+     </div>
+    </div><!-- Página Amigos -->
+    <div class="page" id="amigos">
+     <p class="page-description">"O segredo, querida Alice, é rodear-se de pessoas que façam sorrir o coração. É então, só então que estarás no país das maravilhas"</p>
+     <div class="gallery">
+      <div class="gallery-item">
+       Foto 1
+      </div>
+      <div class="gallery-item">
+       Foto 2
+      </div>
+      <div class="gallery-item">
+       Foto 3
+      </div>
+      <div class="gallery-item">
+       Foto 4
+      </div>
+      <div class="gallery-item">
+       Foto 5
+      </div>
+      <div class="gallery-item">
+       Foto 6
+      </div>
+      <div class="gallery-item">
+       Foto 7
+      </div>
+      <div class="gallery-item">
+       Foto 8
+      </div>
+      <div class="gallery-item">
+       Foto 9
+      </div>
+      <div class="gallery-item">
+       Foto 10
+      </div>
+      <div class="gallery-item">
+       Foto 11
+      </div>
+      <div class="gallery-item">
+       Foto 12
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+    const defaultConfig = {
+      page_title: "Thayna",
+      carousel_title: "Thayna",
+      primary_color: "#6A2FC7",
+      secondary_color: "#ffffff",
+      text_color: "#6A2FC7",
+      font_family: "Georgia",
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+    let currentSlide = 0;
+    const totalSlides = 6;
+
+    // Criar estrelas
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const starCount = 60;
+      
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        star.setAttribute('class', 'star');
+        star.setAttribute('width', Math.random() * 20 + 10);
+        star.setAttribute('height', Math.random() * 20 + 10);
+        star.setAttribute('viewBox', '0 0 24 24');
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z');
+        
+        star.appendChild(path);
+        starsContainer.appendChild(star);
+      }
+    }
+
+    createStars();
+
+    // Toggle Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+        sidebar.classList.remove('open');
+      }
+    });
+
+    // Navegação do Menu
+    const menuItems = document.querySelectorAll('.menu-item');
+    const pages = document.querySelectorAll('.page');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const targetPage = this.getAttribute('data-page');
+        
+        menuItems.forEach(mi => mi.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        
+        this.classList.add('active');
+        document.getElementById(targetPage).classList.add('active');
+        
+        // Fechar menu após seleção
+        sidebar.classList.remove('open');
+      });
+    });
+
+    // Carrossel
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const currentSlideSpan = document.getElementById('current-slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+      currentSlideSpan.textContent = index + 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    // Element SDK
+    async function onConfigChange(newConfig) {
+      const baseFont = newConfig.font_family || defaultConfig.font_family;
+      const baseFontStack = `${baseFont}, Georgia, 'Times New Roman', serif`;
+      const baseSize = newConfig.font_size || defaultConfig.font_size;
+      const primaryColor = newConfig.primary_color || defaultConfig.primary_color;
+      const secondaryColor = newConfig.secondary_color || defaultConfig.secondary_color;
+      const textColor = newConfig.text_color || defaultConfig.text_color;
+
+      document.body.style.fontFamily = baseFontStack;
+      document.body.style.fontSize = `${baseSize}px`;
+
+      document.getElementById('page-title').textContent = newConfig.page_title || defaultConfig.page_title;
+      document.getElementById('carousel-title').textContent = newConfig.carousel_title || defaultConfig.carousel_title;
+
+      document.querySelector('.sidebar').style.background = primaryColor;
+      document.body.style.background = secondaryColor;
+      
+      const carouselSlides = document.querySelectorAll('.carousel-slide');
+      carouselSlides.forEach(slide => {
+        slide.style.background = `linear-gradient(135deg, ${primaryColor} 0%, ${primaryColor}cc 100%)`;
+      });
+
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      galleryItems.forEach(item => {
+        item.style.background = `linear-gradient(135deg, ${primaryColor} 0%, ${primaryColor}cc 100%)`;
+      });
+
+      const socialIcons = document.querySelectorAll('.social-icon path, .social-icon circle, .social-icon rect');
+      socialIcons.forEach(icon => {
+        if (icon.hasAttribute('stroke')) {
+          icon.setAttribute('stroke', primaryColor);
+        }
+        if (icon.hasAttribute('fill') && icon.getAttribute('fill') !== 'none') {
+          icon.setAttribute('fill', primaryColor);
+        }
+      });
+
+      const carouselTitle = document.querySelector('.carousel-title');
+      if (carouselTitle) {
+        carouselTitle.style.color = textColor;
+        carouselTitle.style.fontSize = `${baseSize * 3.5}px`;
+      }
+
+      document.querySelector('.sidebar h1').style.fontSize = `${baseSize * 1.75}px`;
+      document.querySelectorAll('.menu-item').forEach(item => {
+        item.style.fontSize = `${baseSize * 1.125}px`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["page_title", config.page_title || defaultConfig.page_title],
+        ["carousel_title", config.carousel_title || defaultConfig.carousel_title]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a0afc89022b1b1b',t:'MTc2MzUwNTgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
