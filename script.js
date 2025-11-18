@@ -15,6 +15,9 @@ const defaultConfig = {
     // Criar estrelas
     function createStars() {
       const starsContainer = document.getElementById('stars');
+      // Corrigir para evitar recriar estrelas se já existirem
+      if (starsContainer.children.length > 0) return; 
+
       const starCount = 60;
       
       for (let i = 0; i < starCount; i++) {
@@ -78,35 +81,48 @@ const defaultConfig = {
     const currentSlideSpan = document.getElementById('current-slide');
 
     function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-      currentSlideSpan.textContent = index + 1;
+      // Garantir que os elementos existem antes de tentar usá-los
+      if (slides.length > 0 && currentSlideSpan) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        currentSlideSpan.textContent = index + 1;
+      }
     }
 
-    prevBtn.addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-    });
+    // Adicionar verificação se os botões existem
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      });
 
-    nextBtn.addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    });
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      });
+    }
+
+    // Chamar showSlide para garantir que o estado inicial está correto
+    showSlide(currentSlide);
+
 
     // Element SDK
     async function onConfigChange(newConfig) {
-      const baseFont = newConfig.font_family || defaultConfig.font_family;
+      // Atualizar a config global
+      config = { ...defaultConfig, ...newConfig };
+
+      const baseFont = config.font_family;
       const baseFontStack = `${baseFont}, Georgia, 'Times New Roman', serif`;
-      const baseSize = newConfig.font_size || defaultConfig.font_size;
-      const primaryColor = newConfig.primary_color || defaultConfig.primary_color;
-      const secondaryColor = newConfig.secondary_color || defaultConfig.secondary_color;
-      const textColor = newConfig.text_color || defaultConfig.text_color;
+      const baseSize = config.font_size;
+      const primaryColor = config.primary_color;
+      const secondaryColor = config.secondary_color;
+      const textColor = config.text_color;
 
       document.body.style.fontFamily = baseFontStack;
       document.body.style.fontSize = `${baseSize}px`;
 
-      document.getElementById('page-title').textContent = newConfig.page_title || defaultConfig.page_title;
-      document.getElementById('carousel-title').textContent = newConfig.carousel_title || defaultConfig.carousel_title;
+      document.getElementById('page-title').textContent = config.page_title;
+      document.getElementById('carousel-title').textContent = config.carousel_title;
 
       document.querySelector('.sidebar').style.background = primaryColor;
       document.body.style.background = secondaryColor;
@@ -143,53 +159,49 @@ const defaultConfig = {
       });
     }
 
-    function mapToCapabilities(config) {
+    function mapToCapabilities(configData) {
+      // Usar configData para garantir que estamos com os dados mais recentes
       return {
         recolorables: [
           {
-            get: () => config.primary_color || defaultConfig.primary_color,
+            get: () => configData.primary_color || defaultConfig.primary_color,
             set: (value) => {
-              config.primary_color = value;
               window.elementSdk.setConfig({ primary_color: value });
             }
           },
           {
-            get: () => config.secondary_color || defaultConfig.secondary_color,
+            get: () => configData.secondary_color || defaultConfig.secondary_color,
             set: (value) => {
-              config.secondary_color = value;
               window.elementSdk.setConfig({ secondary_color: value });
             }
           },
           {
-            get: () => config.text_color || defaultConfig.text_color,
+            get: () => configData.text_color || defaultConfig.text_color,
             set: (value) => {
-              config.text_color = value;
               window.elementSdk.setConfig({ text_color: value });
             }
           }
         ],
         borderables: [],
         fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
+          get: () => configData.font_family || defaultConfig.font_family,
           set: (value) => {
-            config.font_family = value;
             window.elementSdk.setConfig({ font_family: value });
           }
         },
         fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
+  S       get: () => configData.font_size || defaultConfig.font_size,
           set: (value) => {
-            config.font_size = value;
             window.elementSdk.setConfig({ font_size: value });
           }
         }
       };
     }
 
-    function mapToEditPanelValues(config) {
+    function mapToEditPanelValues(configData) {
       return new Map([
-        ["page_title", config.page_title || defaultConfig.page_title],
-        ["carousel_title", config.carousel_title || defaultConfig.carousel_title]
+        ["page_title", configData.page_title || defaultConfig.page_title],
+        ["carousel_title", configData.carousel_title || defaultConfig.carousel_title]
       ]);
     }
 
